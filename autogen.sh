@@ -11,10 +11,14 @@ if [ "$1" = "clean" ]; then
   exit
 fi
 
-aclocal -I m4
-autoreconf -i
-automake --gnu --add-missing
-autoconf
+set -x
+
+cat /etc/os-release
+dpkg -l | grep -E "(m4|autoconf|automake|gettext)"
+aclocal --verbose -W all
+autoreconf -i --verbose
+automake --gnu --add-missing --verbose
+autoconf --verbose
 
 case "$OSTYPE" in
   darwin*)

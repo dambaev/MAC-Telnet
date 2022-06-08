@@ -19,6 +19,7 @@
 #ifndef _INTERFACES_H
 #define _INTERFACES_H 1
 
+#include "protocol.h"
 #define MAX_INTERFACES 32
 
 struct net_interface {

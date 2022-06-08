@@ -39,6 +39,7 @@
 #include <stdio.h>
 #include <float.h>
 #include <config.h>
+#include <getopt.h>
 
 #include "protocol.h"
 #include "interfaces.h"
